@@ -29,16 +29,16 @@
     npm install
     ```
 
-4. **Set up the `.env` file**:
+4. **Set up the `.env` file(not necessary)**:
     ```bash
     cp .env.example .env
     ```
-    Configure database settings and generate the application key:
+    Configure database settings and generate the application key(not necessary):
     ```bash
     php artisan key:generate
     ```
 
-5. **Run migrations**:
+5. **Run migrations**(not necessary):
     ```bash
     php artisan migrate
     ```
