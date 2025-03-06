@@ -56,8 +56,10 @@
 ### Production Build (optional)
 ```bash
 npm run build
-
+```
 ### Testing the Application
+
+```bash
 
 Open the app: http://127.0.0.1:8000
 
@@ -74,3 +76,5 @@ Reset: Click Reset to clear all selections.
 Code Explanation
 Frontend: Tailwind CSS for styling, Alpine.js for interactivity (planet/vehicle selection, dynamic updates).
 Backend: Laravel and Livewire handle the server-side logic and real-time updates between frontend and backend.
+
+```
