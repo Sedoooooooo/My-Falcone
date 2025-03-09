@@ -78,6 +78,13 @@ class FindingFalcone extends Component
         ]);
     }
 
+    public function resetForm() {
+        $this->selectedPlanets = [null, null, null, null];
+        $this->selectedVehicles = [null, null, null, null];
+        $this->timeTaken = 0;
+        $this->vehicleCounts = [];
+    }
+
     public function updateVehicleCounts()
     {
         // Track the selected vehicles and adjust counts
