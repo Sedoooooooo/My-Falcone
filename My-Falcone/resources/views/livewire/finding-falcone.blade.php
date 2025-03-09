@@ -65,18 +65,16 @@
 }"
 x-init="$watch('selectedPlanets', () => { checkDisabledPlanets(); updateVehicleUnits(); })"
 x-effect="updateVehicleUnits()"
-class = "flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4"
+class = "flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6"
 >
 
     <div class="flex flex-row justify-end w-full mb-6">
         <div class="flex items-center">
-            <span
             <a href="#" @click.prevent="$wire.resetForm()" class="text-black">
                 Reset
             </a>
-            </span>
             <span class="px-4">|</span>
-            <a href="#" @click.prevent="showInstructions = !showInstructions" class="text-black hover:text-grey-900">
+            <a href="#" @click.prevent="showInstructions = !showInstructions; $nextTick(() => $refs.modal.scrollIntoView({behavior: 'smooth'}))" class="text-black hover:text-grey-900">
                 How to Play
             </a>
         </div>
@@ -153,7 +151,7 @@ class = "flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4"
     </button>
 
     <!-- Modal for How to Play Instructions -->
-    <div x-show="showInstructions" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
+    <div x-ref="modal" x-show="showInstructions" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
         class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4" x-cloak>
         <div class="bg-white p-4 rounded-lg shadow-lg w-96 max-w-full">
 
