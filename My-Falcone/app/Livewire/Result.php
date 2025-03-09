@@ -24,7 +24,6 @@ class Result extends Component
             'vehicles' => $this->vehicles
         ]);
 
-        // Validate inputs
         if (empty($this->planets) || empty($this->vehicles)) {
             $this->errorMessage = 'Invalid input. Please select planets and vehicles.';
             Log::error('Invalid input, planets or vehicles are empty.');
@@ -36,7 +35,6 @@ class Result extends Component
         $planetFound = session('planet_found', 'Not Found');
         $timeTaken = session('time_taken', null);
 
-        // Log response for debugging
         Log::debug('Result Data from Session:', ['status' => $status, 'planet_found' => $planetFound, 'time_taken' => $timeTaken]);
 
         // Check for the status in the session and set the result data accordingly

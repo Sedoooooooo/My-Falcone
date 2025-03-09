@@ -4,7 +4,7 @@
     selectedPlanets: @entangle('selectedPlanets'),
     selectedVehicles: @entangle('selectedVehicles'),
     timeTaken: @entangle('timeTaken'),
-    vehicleCounts: { 'Space pod': 3, 'Space rocket': 2 }, // Sample counts, modify as needed
+    vehicleCounts: { 'Space pod': 2, 'Space rocket': 1, 'Space shuttle': 1, 'Space ship': 2 }, // Sample counts only, depends on the API data
     disabledPlanets: [],
 
     updateVehicleUnits() {
@@ -68,19 +68,14 @@ class = "flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4"
 >
 
     <div class="flex flex-row items-center justify-between w-full mb-6 ml-6">
-        <!-- Main Title -->
         <span class="text-4xl font-bold mx-auto">Finding Falcone!</span>
-
-        <!-- Header Section with Links -->
         <div class="text-sm ml-auto">
             <a href="/finding-falcone" class="text-black">Reset</a>
         </div>
     </div>
 
-    <!-- Instructions for Selecting Planets -->
     <p class="mb-4 text-xl">Select planets you want to search in:</p>
 
-    <!-- Updated Grid Layout for Destination and Vehicle Selection -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full justify-center">
         @foreach(range(0,3) as $index)
             <div class="flex flex-col items-center p-6 rounded-lg border border-gray-300 shadow-lg">
@@ -124,7 +119,7 @@ class = "flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4"
     <!-- Time Taken Display Section -->
     <div class="flex justify-between items-center w-full mb-6">
         <div class="text-lg font-semibold">
-            Time taken: <span x-text="timeTaken"></span> hours
+            Time taken: <span x-text="timeTaken"></span>
         </div>
     </div>
 
@@ -140,6 +135,5 @@ class = "flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4"
                 hover:bg-gray-600 hover:text-white hover:scale-105">
         Find Falcone!
     </button>
-
 
 </div>

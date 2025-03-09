@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finding Falcone</title>
+    <link rel="icon" href="{{ asset('falcon-image.png') }}" type="image/png">
     @livewireStyles
     @vite('resources/css/app.css')
 </head>

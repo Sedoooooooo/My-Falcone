@@ -13,7 +13,6 @@ class FindingFalcone extends Component
     public $selectedVehicles = [null, null, null, null];
     public $timeTaken           = 0;
     public $vehicleCounts       = []; 
-    private $previousSelections = [];
 
     public function mount()
     {
@@ -96,7 +95,6 @@ class FindingFalcone extends Component
 
         Log::debug('Vehicle Counts After Adjustment', ['vehicleCounts' => $this->vehicleCounts]);
 
-        // Update session data
         session()->put('vehicleCounts', $this->vehicleCounts);
     }
 
